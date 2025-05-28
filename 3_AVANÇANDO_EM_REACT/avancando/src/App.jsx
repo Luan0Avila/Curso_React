@@ -4,7 +4,10 @@ import viteLogo from '/vite.svg'
 import './App.css'
 // - 2 Imagem em assets
 import city from './assets/city.jpg'
+
 import { Data } from './components/Data'
+
+import ListRender from './components/ListRender'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +22,8 @@ function App() {
       <img src={city} alt="Outra imagem" />
       {/* 3 - Usedata*/}
       <Data/>
+      {/* 4 - Render de lista*/}
+      <ListRender/>
     </div>
   )
 }
