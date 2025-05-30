@@ -21,12 +21,38 @@ import CarDetails from './components/CarDetails'
 // 11 - Renderização de listas com componente
 const cars = [
   { id: 1, brand: "Ferrari", color: "Amarelo", km: 0},
-  { id: 1, brand: "KIA", color: "Branco", km: 20000},
-  { id: 1, brand: "Renault", color: "Azul", km: 32000}
+  { id: 2, brand: "KIA", color: "Branco", km: 20000},
+  { id: 3, brand: "Renault", color: "Azul", km: 32000}
 ]
+
+// 12 - Fragment
+import Fragment from './components/Fragment'
+
+// 13 - Children
+import Container from './components/Container'
+
+// 14 - Função em prop
+import ExecuteFunction from './components/ExecuteFunction'
+
+// 15 - State lift
+import Message from './components/Message'
+import ChangeMessage from './components/ChangeMessage'
+
 
 function App() {
   const [count, setCount] = useState(0)
+
+  // 14 - Função em prop
+  function shoMessage() {
+    console.log("Evento do componente pai")
+  }
+
+  // 15 - State lift
+  const [message, setMessage] = useState("")
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+  }
 
   return (
     <div style={{paddingBottom: "500px"}}>
@@ -57,6 +83,18 @@ function App() {
         color={car.color} 
         km={car.km}/>
       ))}
+      {/* 12 - Fragment*/}
+      <Fragment/>
+      {/* 13 - Children*/}
+      <Container>
+        <h2>Teste</h2>
+        <p>Meu container</p>
+      </Container>
+      {/* 14 - Função em prop*/}
+      <ExecuteFunction myFunction={shoMessage}/>
+      {/* 15 - state lift*/}
+      <Message msg={message}/>
+      <ChangeMessage handleMessage={handleMessage}/>
     </div>
   )
 }
