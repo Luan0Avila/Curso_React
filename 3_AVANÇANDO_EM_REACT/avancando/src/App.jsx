@@ -15,6 +15,9 @@ import ConditionalRender from './components/ConditionalRender'
 // 8 - props
 import ShowUserName from './components/ShowUserName'
 
+// 9 - Desestruturando props
+import CarDetails from './components/CarDetails'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -34,8 +37,8 @@ function App() {
       <ConditionalRender/>
       {/*8 - props*/}
       <ShowUserName name="Luna"/>
-
-    
+      {/* 9 - Desestruturando props*/}
+      <CarDetails brand="Ford" km={100000} color="Cinza"/>  
     </div>
   )
 }
