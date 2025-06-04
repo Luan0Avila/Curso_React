@@ -24,6 +24,11 @@
       "id": "a680",
       "name": "testando carregamento",
       "price": "20"
+    },
+    {
+      "id": "b971",
+      "name": "teste de post",
+      "price": "50,10"
     }
   ]
 }
