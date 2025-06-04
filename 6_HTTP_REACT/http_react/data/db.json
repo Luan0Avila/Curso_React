@@ -19,6 +19,11 @@
       "id": "2fd3",
       "name": "teste",
       "price": "1"
+    },
+    {
+      "id": "a680",
+      "name": "testando carregamento",
+      "price": "20"
     }
   ]
 }
