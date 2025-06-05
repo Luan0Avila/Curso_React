@@ -11,7 +11,7 @@ function App() {
 
 
   // 4 - custom hook
-  const {data: items, httpConfig, loading} = useFetch(url)
+  const {data: items, httpConfig, loading, error} = useFetch(url)
 
 
 //  useEffect(() => {
@@ -67,6 +67,8 @@ function App() {
       <h1>HTTP em React</h1>
     {/* 6 - loading */}
     {loading && <p>Carregando...</p>}
+    {/* 7 -tratando erros */}
+    {error && <p>{error}</p>}
       {/* 1 - resgate de dados */}
       <ul>
         {items &&
@@ -85,7 +87,9 @@ function App() {
             <span>Preço</span>
             <input type="text" value={price} onChange={(e) => setPrice(e.target.value)}/>
           </label>
-          <input type="submit" value="Enviar"/>
+          {/* 7 - loading em POST */}
+          {loading && <input type="submit" disabled value="Aguarde"/>}
+          {!loading && <input type="submit" value="Enviar"/>}
         </form>
       </div>
 
