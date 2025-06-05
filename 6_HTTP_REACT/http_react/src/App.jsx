@@ -11,7 +11,7 @@ function App() {
 
 
   // 4 - custom hook
-  const {data: items, httpConfig} = useFetch(url)
+  const {data: items, httpConfig, loading} = useFetch(url)
 
 
 //  useEffect(() => {
@@ -65,7 +65,8 @@ function App() {
   return (
     <>
       <h1>HTTP em React</h1>
-
+    {/* 6 - loading */}
+    {loading && <p>Carregando...</p>}
       {/* 1 - resgate de dados */}
       <ul>
         {items &&
