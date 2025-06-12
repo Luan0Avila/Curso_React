@@ -8,6 +8,9 @@ import { createBrowserRouter, RouterProvider, Navigate} from "react-router-dom";
 import Home from './routes/Home.jsx';
 import Contact from './routes/Contact.jsx';
 
+// 2 - Criando o provider
+import { CounterContextProvider } from './context/CounterContext.jsx';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +30,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <RouterProvider router={router}/>
+    <CounterContextProvider>
+      <RouterProvider router={router}/>
+    </CounterContextProvider>
   </StrictMode>,
 )
