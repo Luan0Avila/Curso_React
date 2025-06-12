@@ -4,9 +4,9 @@ import React from 'react'
 import { useFetch } from '../hooks/useFetch'
 
 const Home = () => {
+    const url = "http://localhost:3000/products"
     const {data: items} = useFetch(url)
 
-    const url = "http://localhost:3000/products"
 
     return (
         <div>
