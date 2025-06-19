@@ -1,3 +1,6 @@
+// 4 - importação de componentes
+import FIrstComponent from "./components/FIrstComponent";
+
 
 function App() {
 
@@ -18,6 +21,7 @@ function App() {
       <p>Idade: {age}</p>
       {isWorking && <p>Está trabalhando!</p>}
       <h3>{userGreeting(name)}</h3>
+      <FIrstComponent/>
     </div>
   );
 }
