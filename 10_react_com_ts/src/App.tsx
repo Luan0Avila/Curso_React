@@ -5,6 +5,8 @@ import FIrstComponent from "./components/FIrstComponent";
 import SecondComponent from "./components/SecondComponent";
 import Destructuring from "./components/Destructuring";
 
+// 6 - useState
+import State from "./components/State";
 
 function App() {
 
@@ -29,6 +31,7 @@ function App() {
       <SecondComponent name="Segundo"/>
       <Destructuring title="Primeiro post" content="Algum conteúdo" commentQty={11} tags={["TypeScript", "JavaScript", "React"]}/>
       <Destructuring title="Segundo post" content="Outro conteúdo" commentQty={110} tags={["Python", "Django"]}/>
+      <State/>
     </div>
   );
 }
