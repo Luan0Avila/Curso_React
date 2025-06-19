@@ -1,13 +1,23 @@
 import React from 'react'
 
+export enum Category {
+    JS = "JavaScript",
+    TS = "TypeScript",
+    P  = "Python"
+}
+
 type Props = {
     title: string
     content: string
     commentQty: number
     tags: string[]
+    // 8 - enum
+    category: Category
 }
 
-const Destructuring = ({title, content, commentQty, tags}: Props) => {
+
+
+const Destructuring = ({title, content, commentQty, tags, category}: Props) => {
     return (
         <div>
             <h2>{title}</h2>
@@ -18,6 +28,7 @@ const Destructuring = ({title, content, commentQty, tags}: Props) => {
                     <span>#{tag} </span>
                 ))}
             </div>
+            <h4>Categoria: {category}</h4>
 
         </div>
     )
